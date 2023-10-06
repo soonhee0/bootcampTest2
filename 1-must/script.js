@@ -39,7 +39,7 @@ test(isEven(10), true);
 function makeStr(array) {
   return array.join(``);
 }
-
+// ここからはテストなので変更を加えないでください
 // ここからはテストなので変更を加えないでください
 console.log("*** 問題2 ***");
 
