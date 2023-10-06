@@ -9,8 +9,12 @@
  * @param {number}
  * @returns {boolean}
  */
-
-// ここに関数を定義しましょう
+function isEven(num) {
+  if (num % 2 === 0) {
+    return true;
+  }
+  return false;
+}
 // ここに関数を定義しましょう
 
 // ここからはテストなので変更を加えないでください
@@ -32,8 +36,9 @@ test(isEven(10), true);
  * @param {Array<string>}
  * @returns {string}
  */
-
-// ここに関数を定義しましょう
+function makeStr(array) {
+  return array.join(``);
+}
 
 // ここからはテストなので変更を加えないでください
 console.log("*** 問題2 ***");
@@ -55,7 +60,16 @@ test(makeStr(["true", " ", "false"]), "true false");
  * @returns {Array<string>}
  */
 
-// ここに関数を定義しましょう
+function pick(array, num) {
+  let result = [];
+  for (const elem of array) {
+    if (elem[num] !== undefined) {
+      result.push(elem[num]);
+    }
+  }
+  return result;
+}
+//forループでindex num の要素にアクセス
 
 // ここからはテストなので変更を加えないでください
 console.log("*** 問題3 ***");
@@ -99,7 +113,15 @@ test(pick(testArray, 4), ["5", "five"]);
  */
 
 // ここに関数を定義しましょう
-
+function collectKeys(obj, str) {
+  let result = [];
+  for (const key in obj) {
+    if (obj[key] === str) {
+      result.push(key);
+    }
+  }
+  return result;
+}
 // ここからはテストなので変更を加えないでください
 console.log("*** 問題4 ***");
 
@@ -145,7 +167,13 @@ test(collectKeys(testObject, 100), ["b"]);
  * @returns {object<any>}
  */
 
-// ここに関数を定義しましょう
+function createObject(arr1, arr2) {
+  let result = {};
+  for (const elem of arr1) {
+    result[elem] = arr2[arr1.indexOf(elem)];
+  }
+  return result;
+}
 
 // ここからはテストなので変更を加えないでください
 console.log("*** 問題5 ***");
